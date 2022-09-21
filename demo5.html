@@ -1,0 +1,55 @@
+<!--
+Demo #2
+This example builds on example 2 and shows how flexbox can be used to change layouts easily with
+media queries
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .flex-wrapper {
+            display: flex;
+            flex-direction: column;
+
+            border: 1px solid gray;
+        }
+
+        .flex-item {
+            width: 150px;
+            height: 150px;
+            border: 1px solid violet;
+        }
+
+        @media screen and (min-width: 480px) {
+            .flex-wrapper {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-wrapper">
+        <div class="flex-item">
+            Flex Item 1
+        </div>
+        <div class="flex-item">
+            Flex Item 2
+        </div>
+        <div class="flex-item">
+            Flex Item 3
+        </div>
+    </div>
+</body>
+
+</html>

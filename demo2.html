@@ -1,0 +1,50 @@
+<!--
+Demo #2
+This example shows a Flexbox container with div items inside of it. We can align these items
+horizontally or vertically with Flexbox flex-direction.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .flex-wrapper {
+            display: flex;
+            justify-content: center;
+            /* try other values like space-between or space-around */
+            align-items: center;
+
+            border: 1px solid gray;
+        }
+
+        .flex-item {
+            width: 150px;
+            height: 150px;
+            border: 1px solid violet;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-wrapper">
+        <div class="flex-item">
+            Flex Item 1
+        </div>
+        <div class="flex-item">
+            Flex Item 2
+        </div>
+        <div class="flex-item">
+            Flex Item 3
+        </div>
+    </div>
+</body>
+
+</html>

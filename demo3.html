@@ -1,0 +1,52 @@
+<!--
+Demo #2
+This example builds on demo 2 and shows a flexbox within a flexbox. It also shows how to change
+the flexbox direction (row vs column). 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .flex-wrapper {
+            display:flex;
+            justify-content:center;
+            align-items: center;
+            /*flex-direction: column;*/
+
+            border: 1px solid gray;
+        }
+
+        .flex-item {
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            width: 150px;
+            height: 150px;
+            border: 1px solid violet;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="flex-wrapper">
+        <div class="flex-item">
+            Flex Item 1
+        </div>
+        <div class="flex-item">
+            Flex Item 2
+        </div>
+        <div class="flex-item">
+            Flex Item 3
+        </div>
+    </div>
+</body>
+</html>

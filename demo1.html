@@ -1,0 +1,40 @@
+<!--
+Demo #1
+This example demonstrates a simple flexbox that fills the entire viewport and centers
+the content both horizontally and vertically    
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .flex-content {
+            height: 100%;
+            background: violet;
+            color: white;
+            font-size: 2rem;
+            font-family: Arial, Helvetica, sans-serif;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-content">
+        I'm centered by flex!
+    </div>
+</body>
+
+</html>

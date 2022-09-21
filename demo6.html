@@ -1,0 +1,62 @@
+<!--
+Demo #6
+This example demonstrates using flex-wrap. By default, flexbox will overflow items if they don't
+fit within its container. Using the flex-wrap, you can break to the next 'row' and continue to 
+tile the items.     
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .flexwrap {
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            width: 500px;
+            border: 1px solid #ccc;
+        }
+
+        .item {
+            display: flex;
+            flex: 0 0 30%; /* sets the baseline size to %30 */
+
+            border: 1px solid violet;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="flexwrap">
+        <div class="item">
+            Item 1
+        </div>
+        <div class="item">
+            Item 2
+        </div>
+        <div class="item">
+            Item 3
+        </div>
+        <div class="item">
+            Item 4
+        </div>
+        <div class="item">
+            Item 5
+        </div>
+        <div class="item">
+            Item 6
+        </div>
+    </div>
+</body>
+
+</html>

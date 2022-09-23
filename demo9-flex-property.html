@@ -1,0 +1,68 @@
+<!--
+Demo #9
+The flex property is an important component of using flexbox effectively. Below is the css definition:
+flex: [flex-grow value] [flex-shrink value] [flex-basis size]
+We assign the flex property to items inside of a flexbox container. When this property is used,
+flexbox will size the item based on the inputs provided and the space available.
+
+The flex input values:
+flex-grow: the amount the flex item can grow, in relation to other flex items, when space is available.
+flex-shrink: the amount the flex item can shrink, in relation to other flex items, when space is NOT available.
+flex-basis: the basis size or initial size the flex item is sized to.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .flex-wrapper {
+            display: flex;            
+            align-items: center;
+            
+            height:200px;
+            background-color:#eee;            
+        }
+
+        .flex-item {
+            width: 250px;
+            height: 200px;
+            background-color: #ccc;
+            border: 1px solid violet;
+        }
+
+        /* This element will grow into all space available, and never shrink */
+        /*.flex-grow {
+            flex: 1 0 auto;
+        }
+
+        /* This element will never grow, and will shrink when space is not available */
+        /*.flex-shrink {
+            flex: 0 1 auto;
+        }*/
+    </style>
+</head>
+
+<body>
+    <div class="flex-wrapper">
+        <div class="flex-item flex-shrink">
+            Flex Item 1
+        </div>
+        <div class="flex-item flex-grow">
+            Flex Item 2
+        </div>
+        <div class="flex-item flex-shrink">
+            Flex Item 3
+        </div>
+    </div>
+</body>
+
+</html>

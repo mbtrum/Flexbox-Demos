@@ -1,0 +1,55 @@
+<!--
+Demo #7
+This example demonstrates the flexbox align-self functionality. This scenario is when you 
+have a flex container with items (e.g. div) aligned a particular way, such as flex-start (top).
+If you want to align a particular element differently (i.e. bottom), you can use align-self 
+to change that particular element's alignment.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .flex-wrapper {
+            display: flex;
+            height: 200px;
+            width:600px;
+            background-color:#eee;
+        }
+
+        .flex-item {
+            background-color:#aaa;
+            color:white;
+            width: 200px;
+            height: 100px;            
+        }
+
+        .align-self {
+            align-self: flex-end;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-wrapper">
+        <div class="flex-item">
+            Flex Item 1
+        </div>
+        <div class="flex-item align-self">
+            Flex Item 2 Align Self
+        </div>
+        <div class="flex-item">
+            Flex Item 3
+        </div>
+    </div>
+</body>
+
+</html>

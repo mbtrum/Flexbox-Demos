@@ -1,0 +1,142 @@
+<!--
+Demo #1
+This example demonstrates a simple flexbox that fills the entire viewport and centers
+the content both horizontally and vertically    
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .flex-wrapper {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .main {            
+            flex: 1 0 auto; /* the first value 1 tells flex to expand into all the space available */
+            
+            background-color: #eee;
+            padding: 1rem;
+        }
+
+        .sticky-footer {
+            background-color:violet;
+            color: white;
+            padding: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-wrapper">
+        <main class="main">
+            <p>
+                I'm the main content. I don't have enough content to push the footer to the bottom of the page/window.
+            </p>
+            <p>
+                Uncomment the "Lorum Ipsum" to see the footer get pushed out of the window and to the bottom of the page.
+            </p>
+            <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus ligula, accumsan ac hendrerit ac,
+                vulputate id lacus. Pellentesque ultricies eleifend ultrices. Proin dui est, egestas vitae nisl id,
+                lobortis tincidunt turpis. Aenean venenatis erat in libero fringilla, sed suscipit lacus aliquam. Cras
+                sit amet dolor sagittis, tempus massa vitae, egestas sapien. Aenean pharetra nibh risus. Ut risus odio,
+                euismod vitae condimentum et, lobortis sit amet mauris. Nam malesuada est eu eros eleifend suscipit.
+                Nullam id lacinia felis. Mauris feugiat mattis dui, consequat aliquet augue condimentum quis. Mauris
+                quam tellus, faucibus in purus sit amet, scelerisque eleifend magna. Proin convallis scelerisque
+                eleifend. Aenean ultrices ut sapien ut consectetur. Duis eleifend mi tortor, non facilisis leo tincidunt
+                sed. Pellentesque sed convallis nisl.
+            </p>
+            <p>
+                Praesent feugiat, dolor in sodales ultrices, ex est facilisis lacus, id aliquet dui quam eu neque.
+                Maecenas ac tincidunt orci. Aliquam malesuada sollicitudin velit quis scelerisque. Proin ac magna
+                dignissim lacus dictum venenatis sed at orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Donec venenatis neque nec erat congue pellentesque eu sit amet sem. In condimentum eget ante in
+                imperdiet.
+            </p>
+            <p>
+                Duis lobortis justo augue, a egestas metus tempor at. Integer lacinia mauris ut ante dapibus ultricies.
+                In congue sollicitudin maximus. Vivamus molestie justo eget sapien sollicitudin molestie id vitae odio.
+                Sed laoreet nisi id iaculis luctus. Maecenas sit amet elit quis dolor sodales fermentum. Pellentesque ex
+                mauris, aliquet ac bibendum sed, cursus et nisi. Sed maximus cursus odio, in imperdiet eros scelerisque
+                vel. Maecenas cursus enim at nisi posuere pharetra. Duis blandit auctor ipsum, a vulputate est faucibus
+                ac. Curabitur ut lorem nisi. Fusce ut maximus dolor.
+            </p>
+            <p>
+                Fusce ac metus lacus. In hac habitasse platea dictumst. Mauris condimentum mattis mi, non tincidunt
+                felis tristique sit amet. Fusce varius nisi id velit aliquet, quis tincidunt arcu vestibulum. Donec id
+                commodo leo. Curabitur lacinia semper egestas. Sed sagittis eu ligula vitae egestas. Interdum et
+                malesuada fames ac ante ipsum primis in faucibus. Vivamus aliquam elit et leo euismod, sit amet
+                efficitur dui sagittis. Vivamus dapibus eget nunc et tincidunt. Duis congue, sapien eu elementum
+                commodo, mauris nunc consectetur purus, et interdum arcu ligula non lacus. Pellentesque consectetur
+                lorem in diam interdum mattis. Vivamus et nisi blandit, auctor metus id, maximus mi. Nunc consectetur
+                consequat dui, vitae sollicitudin dui malesuada vel. Fusce vel justo imperdiet, placerat ipsum ac, porta
+                ante.
+            </p>
+            <p>
+                Duis elementum nisi elit, in scelerisque libero molestie ac. Donec rhoncus commodo fringilla. Quisque
+                nec nisl sed nunc feugiat vulputate. Duis eros diam, commodo nec tortor ac, blandit faucibus dolor.
+                Aliquam gravida, mi in pretium tincidunt, dui libero placerat nibh, vitae blandit libero risus quis
+                nisi. Morbi pretium sapien eget sapien auctor, vel condimentum neque dictum. Nullam porta id sapien in
+                aliquam. Morbi at posuere augue, luctus tincidunt nibh. Etiam vulputate auctor felis, vitae placerat
+                velit aliquam sed. Phasellus orci purus, ultricies finibus metus maximus, laoreet gravida arcu. Sed eget
+                nunc quis massa gravida ultrices in eget erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Praesent eget dapibus odio. Nam ut nunc sit amet tellus sagittis efficitur. Aliquam condimentum eget
+                velit in egestas. Etiam fermentum mollis finibus.
+            </p>
+            <p>
+                Vivamus eu venenatis sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                inceptos himenaeos. Nunc mauris orci, pulvinar eu purus eu, porta rhoncus nunc. Etiam nunc enim,
+                vestibulum et leo et, posuere facilisis massa. Mauris fringilla mauris metus, id maximus arcu iaculis
+                eu. Etiam id magna sed tellus viverra vehicula sit amet eget ante. Phasellus in fringilla diam. Morbi
+                vel scelerisque odio, sit amet vestibulum nibh. Duis a velit urna. Etiam laoreet velit ut lacus
+                efficitur, feugiat placerat urna ullamcorper. In sed ante mattis, aliquam diam at, tristique urna. Ut
+                fringilla scelerisque purus, eget maximus sapien malesuada sit amet. Phasellus accumsan ut sem vitae
+                luctus. Integer eget fermentum sem. Quisque placerat lectus eu ornare fringilla.
+            </p>
+            <p>
+                Phasellus pretium ullamcorper odio id faucibus. Integer lacinia eros et tortor lobortis, quis ultrices
+                dolor dignissim. Maecenas malesuada tempus leo in suscipit. Maecenas at orci nec lacus congue rutrum.
+                Fusce et porttitor eros. Proin pellentesque, leo ac tempus viverra, arcu nisi hendrerit nunc, eget
+                scelerisque ex sem sit amet tortor. Nulla orci mauris, fermentum vitae elementum sed, porttitor quis
+                nisl. Vivamus molestie massa nec mi euismod, id dignissim urna fringilla. Donec consequat eu justo nec
+                accumsan. Maecenas congue in tortor vel fringilla. Donec tincidunt eleifend dictum. Mauris laoreet
+                lacinia nulla, eu facilisis orci. Ut ut lacus id nibh pulvinar molestie.
+            </p>
+            <p>
+                Nam ultricies aliquet tincidunt. Praesent lacinia suscipit ipsum, ut sagittis nulla maximus non.
+                Phasellus eu mi ac lorem rhoncus ullamcorper at ultrices sapien. Sed at cursus erat. Etiam nibh nisl,
+                mollis ac massa id, tincidunt volutpat erat. Quisque non tristique magna, sit amet vestibulum quam.
+                Aliquam erat volutpat. Morbi diam augue, suscipit scelerisque eros dictum, commodo sollicitudin libero.
+                Quisque dignissim mi sed leo lacinia molestie. Duis odio dolor, facilisis sit amet tempor non, suscipit
+                sit amet sem. Pellentesque sed eros orci. Suspendisse viverra vulputate tincidunt.
+            </p>
+            <p>
+                Integer sed neque pharetra, ultrices odio aliquam, condimentum tortor. Praesent a leo at felis bibendum
+                maximus eget ut turpis. Integer suscipit dapibus metus sed ornare. Aliquam quis libero vitae nisl
+                convallis scelerisque eget vel eros. Phasellus vel magna ornare, fermentum lacus et, commodo nisl. Orci
+                varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vulputate, quam
+                sit amet iaculis viverra, magna sem dignissim tortor, eget consectetur risus turpis egestas libero. Sed
+                lectus dolor, dapibus sed neque sit amet, feugiat varius lorem. Nam non nisl ullamcorper, rhoncus justo
+                sit amet, tincidunt justo. Etiam rhoncus odio ut venenatis viverra. Phasellus ut nulla in leo blandit
+                eleifend eu eget nibh. Mauris hendrerit tellus vel nunc vulputate, at dictum eros porttitor. Vivamus ac
+                sapien enim.
+            </p>-->
+        </main>
+        <footer class="sticky-footer">
+            I'm a sticky footer, but only when there is not enough content above to push me out of the window.
+        </footer>
+    </div>
+</body>
+
+</html>
